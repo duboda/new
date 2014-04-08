@@ -92,13 +92,17 @@
     <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
     <script src="http://getbootstrap.com/assets/js/docs.min.js"></script>
     <script type="text/javascript">
-    Parse.initialize("om9ynedsIy67rU9vfQh8IVR2vv0A6WnFz0jgWUrP", "mzPU7M8YQwD83alRhWwGtM9niEiDcSKs4mOKSNbp");
-    
-    var TestObject = Parse.Object.extend("TestObject");
-var testObject = new TestObject();
-testObject.save({foo: "bar"}).then(function(object) {
-  alert("yay! it worked");
-});
+      Parse.initialize("om9ynedsIy67rU9vfQh8IVR2vv0A6WnFz0jgWUrP", "mzPU7M8YQwD83alRhWwGtM9niEiDcSKs4mOKSNbp");
+      var TestObject = Parse.Object.extend("TestObject");
+      var testObject = new TestObject();
+      testObject.save({foo: "bar"}).then(function(object) {
+        alert("yay! it worked");
+      });
+      PFObject *gameScore = [PFObject objectWithClassName:@"GameScore"];
+gameScore[@"score"] = @1337;
+gameScore[@"playerName"] = @"Sean Plott";
+gameScore[@"cheatMode"] = @NO;
+[gameScore saveInBackground];
   </script>
   </body>
 </html>
