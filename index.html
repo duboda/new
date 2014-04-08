@@ -98,11 +98,11 @@
       testObject.save({foo: "bar"}).then(function(object) {
         alert("yay! it worked");
       });
-      PFObject *gameScore = [PFObject objectWithClassName:@"GameScore"];
-gameScore[@"score"] = @1337;
-gameScore[@"playerName"] = @"Sean Plott";
-gameScore[@"cheatMode"] = @NO;
-[gameScore saveInBackground];
+      var GameSocre = Parse.Object.extend("GameScore")
+      var gameScore = new GameScore();
+      gameScore.save({score: "1337"} {playerName: "Sean Plott"} {cheatMode: "NO"}).then(function(object){
+        alert("ok");
+      });
   </script>
   </body>
 </html>
