@@ -93,11 +93,15 @@
     <script src="http://getbootstrap.com/assets/js/docs.min.js"></script>
     <script type="text/javascript">
       Parse.initialize("om9ynedsIy67rU9vfQh8IVR2vv0A6WnFz0jgWUrP", "mzPU7M8YQwD83alRhWwGtM9niEiDcSKs4mOKSNbp");
-      var object = new Parse.Object("ClassName");
-      object.save({foo: "bar4"}).then(function(object) {
-        alert("yay! it works");
-      });
-      var TestObject = Parse.Object.extend("TestObject");
+      var gameTurn = new Parse.Object("ClassName");
+ gameTurn.save({
+    player: "Jake Cutter",
+    diceRoll: 2
+  }).then(function(gameTurnAgain) {
+    // The save was successful.
+  }, function(error) {
+    // The save failed.  Error is an instance of Parse.Error.
+  });     var TestObject = Parse.Object.extend("TestObject");
       var testObject = new TestObject();
       testObject.save({foo: "bar10"}).then(function(object) {
         alert("yay! it worked");
