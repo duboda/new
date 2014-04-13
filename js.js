@@ -1,4 +1,4 @@
-function myFunction()
+function myFunctionSave()
 {
 Parse.initialize("om9ynedsIy67rU9vfQh8IVR2vv0A6WnFz0jgWUrP", "mzPU7M8YQwD83alRhWwGtM9niEiDcSKs4mOKSNbp");
       var TechBathroom = Parse.Object.extend("TechBathroom");
@@ -76,5 +76,25 @@ Parse.initialize("om9ynedsIy67rU9vfQh8IVR2vv0A6WnFz0jgWUrP", "mzPU7M8YQwD83alRhW
       techbathroom36.save({gender: "M", floor: 4, latitude: 42.05785, longitude: -87.67615, stallnumber: 7});
       var techbathroom37 = new TechBathroom();
       techbathroom37.save({gender: "M", floor: 4, latitude: 42.0580685, longitude: -87.6756324, stallnumber: 3});
+
+};
+function myFunctionQuery(){
+  Parse.initialize("om9ynedsIy67rU9vfQh8IVR2vv0A6WnFz0jgWUrP", "mzPU7M8YQwD83alRhWwGtM9niEiDcSKs4mOKSNbp");
+  var GameScore = Parse.Object.extend("TechBathroom");
+  var query = new Parse.Query(GameScore);
+  query.equalTo("gender", "M");
+  query.find({
+    success: function(results) {
+      alert("Successfully retrieved " + results.length + " scores.");
+      // Do something with the returned Parse.Object values
+      for (var i = 0; i < results.length; i++) { 
+        var object = results[i];
+        alert(object.id + ' - ' + object.get('floor'));
+      }
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+  }
+});
 
 };
