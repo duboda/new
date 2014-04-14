@@ -25,6 +25,13 @@ query.find({
 
 //      alert(locationArray[2]);
     }
+
+},
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+}
+});
+for(var j=0; j<10000000;j++){}; 
 alert("final"+locationArray[2]);
 var locationNameArray = ['Tech109', 'Tech209', 'Tech409'];
 var markers = [];
@@ -101,11 +108,11 @@ function initialize() {
   
   if (Show_1_floor)
   {
-  show1floor();  
+	show1floor();  
   }
   else (Show_2_floor)
   {
-  show2floor();
+	show2floor();
   }
 }
 
@@ -166,8 +173,8 @@ function myFunctionQuery(){
 
 function attachActivityMessage(marker, num){
   var message = ['<a href="../review_Page.html">Tech109</a>',
-     '<a href="../review_Page.html">Tech209</a>',
-     '<a href="../review_Page.html">Tech309</a>'];
+		 '<a href="../review_Page.html">Tech209</a>',
+		 '<a href="../review_Page.html">Tech309</a>'];
   var infowindow = new google.maps.InfoWindow({
     content: message[num]
   });
@@ -178,8 +185,8 @@ function attachActivityMessage(marker, num){
 }
 function attachFriendMessage(marker, num){
   var message = ['<a href="../review_Page.html">Tom</a>',
-     '<a href="../review_Page.html">Jim</a>',
-     '<a href="../review_Page.html">Peter</a>'];
+		 '<a href="../review_Page.html">Jim</a>',
+		 '<a href="../review_Page.html">Peter</a>'];
   var infowindow = new google.maps.InfoWindow({
     content: message[num]
   });
@@ -209,10 +216,3 @@ function handleNoGeolocation(errorFlag) {
 google.maps.event.addDomListener(window, 'load', initialize);
 
 
-
-},
-  error: function(error) {
-    alert("Error: " + error.code + " " + error.message);
-}
-});
-for(var j=0; j<10000000;j++){}; 
