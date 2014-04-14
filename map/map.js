@@ -188,13 +188,7 @@ function myFunctionQuery(){
         locationArray[i] =  Tech;
         
       }
-  },
-    error: function(error) {
-      alert("Error: " + error.code + " " + error.message);
-  }
-});
-  alert(locationArray[2]);
-  clearMarkers();
+        clearMarkers();
   var i=0;
   for (coord in locationArray) {
     var marker = new google.maps.Marker({
@@ -208,6 +202,13 @@ function myFunctionQuery(){
     attachActivityMessage(marker, i);
     i++;
   }
+
+  },
+    error: function(error) {
+      alert("Error: " + error.code + " " + error.message);
+  }
+});
+  alert(locationArray[2]);
 };
 
 
