@@ -1,15 +1,38 @@
-
 // Note: This function requires that you consent to location sharing when
 // prompted by your browser.
 
 var map;
 
-var Mudd109 = new google.maps.LatLng(42.058070, -87.675790);
-var Mudd209 = new google.maps.LatLng(42.058020, -87.675767);
-var Mudd309 = new google.maps.LatLng(42.058100, -87.675780);
+var Tech109 = new google.maps.LatLng(42.058170, -87.675690);
+var Tech209 = new google.maps.LatLng(42.058020, -87.675567);
+var Tech309 = new google.maps.LatLng(42.058150, -87.675780);
+var Tech409 = new google.maps.LatLng(42.058150, -87.575780);
 
-var locationArray = [Mudd109, Mudd209, Mudd309];
-var locationNameArray = ['Mudd109', 'Mudd209', 'Mudd309'];
+
+var locationArray = [1];
+Parse.initialize("om9ynedsIy67rU9vfQh8IVR2vv0A6WnFz0jgWUrP", "mzPU7M8YQwD83alRhWwGtM9niEiDcSKs4mOKSNbp");
+var GameScore = Parse.Object.extend("TechBathroom");
+var query = new Parse.Query(GameScore);
+query.equalTo("gender", "F")&&query.equalTo("floor",1);
+query.find({
+  success: function(results) {
+    // alert("Successfully retrieved " + results.length + " scores.");
+    // Do something with the returned Parse.Object values
+    for (var i = 0; i < results.length; i++) { 
+      var object = results[i];
+      var Tech = new google.maps.LatLng(object.get('latitude'),object.get('longitude'));
+      locationArray[i] =  Tech;
+
+      alert(locationArray[2]);
+    }
+},
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+}
+});
+for(var j=0; j<1000000;j++){}; 
+alert("final"+locationArray[2]);
+var locationNameArray = ['Tech109', 'Tech209', 'Tech409'];
 var markers = [];
 
 var tom = new google.maps.LatLng(42, -87.8);
@@ -21,9 +44,28 @@ var friendArray = [tom, jim, peter];
 var friendNameArray = ['Tom', 'Jim', 'Peter'];
 var friendMarkers = [];
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function initialize() {
   var mapOptions = {
-    zoom: 9
+    zoom: 20
   };
   map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
@@ -37,7 +79,7 @@ function initialize() {
       var infowindow = new google.maps.InfoWindow({
         map: map,
         position: pos,
-        content: 'Location found using HTML5.'
+        content: 'Here is your current location.'
       });
 
       map.setCenter(pos);
@@ -82,13 +124,13 @@ function initialize() {
   }
   clearFriends();
   
-  if (loadedShowFriends)
+  if (Show_1_floor)
   {
-	showFriends();  
+	show1floor();  
   }
-  else (loadedShowMarkers)
+  else (Show_2_floor)
   {
-	showMarkers();
+	show2floor();
   }
 }
 
@@ -102,11 +144,11 @@ function setFriends(map){
     friendMarkers[i].setMap(map);
   }
 }
-function showMarkers(){
+function show2floor(){
   clearFriends();
   setAllMap(map);
 }
-function showFriends(){
+function show1floor(){
   clearMarkers();
   setFriends(map);
 }
@@ -125,10 +167,32 @@ function deleteFriends(){
   friendMarkers=[];
 }
 
+function myFunctionQuery(){
+  Parse.initialize("om9ynedsIy67rU9vfQh8IVR2vv0A6WnFz0jgWUrP", "mzPU7M8YQwD83alRhWwGtM9niEiDcSKs4mOKSNbp");
+  var GameScore = Parse.Object.extend("TechBathroom");
+  var query = new Parse.Query(GameScore);
+  query.equalTo("gender", "F")&&query.equalTo("floor",1);
+  query.find({
+    success: function(results) {
+      // alert("Successfully retrieved " + results.length + " scores.");
+      // Do something with the returned Parse.Object values
+      for (var i = 0; i < results.length; i++) { 
+        var object = results[i];
+        var Tech = new google.maps.LatLng(object.get('latitude'),object.get('longitude'));
+        locationArray[i] =  Tech;
+        
+      }
+  },
+    error: function(error) {
+      alert("Error: " + error.code + " " + error.message);
+  }
+});
+};
+
 function attachActivityMessage(marker, num){
-  var message = ['<a href="../activity/abnet_activity_profile.html">Field Museum</a>',
-		 '<a href="../activity/abnet_activity_profile.html">Dancing in Norris Center</a>',
-		 '<a href="../activity/abnet_activity_profile.html">Shopping</a>'];
+  var message = ['<a href="../review_Page.html">Tech109</a>',
+		 '<a href="../review_Page.html">Tech209</a>',
+		 '<a href="../review_Page.html">Tech309</a>'];
   var infowindow = new google.maps.InfoWindow({
     content: message[num]
   });
@@ -138,9 +202,9 @@ function attachActivityMessage(marker, num){
   });
 }
 function attachFriendMessage(marker, num){
-  var message = ['<a href="../friends/abnet_friend_profile.php">Tom</a>',
-		 '<a href="../friends/abnet_friend_profile.php">Jim</a>',
-		 '<a href="../friends/abnet_friend_profile.php">Peter</a>'];
+  var message = ['<a href="../review_Page.html">Tom</a>',
+		 '<a href="../review_Page.html">Jim</a>',
+		 '<a href="../review_Page.html">Peter</a>'];
   var infowindow = new google.maps.InfoWindow({
     content: message[num]
   });
@@ -159,7 +223,7 @@ function handleNoGeolocation(errorFlag) {
 
   var options = {
     map: map,
-    position: chicago,
+    position: Tech109,
     content: content
   };
 
