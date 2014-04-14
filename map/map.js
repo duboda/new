@@ -38,7 +38,7 @@ function initialize() {
         map: map,
         position: pos,
         content: 'Here is your current location.'
-        locationArray[0] = pos;
+        locationArray = pos;
       });
 
       map.setCenter(pos);
@@ -195,7 +195,7 @@ function myFunctionQuery(){
             map: map,
             position: pos,
             content: 'Here is your current location.'
-            locationArray[0] = pos;
+            locationArray = pos;
           });
 
           map.setCenter(pos);
