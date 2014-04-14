@@ -195,7 +195,11 @@ function myFunctionQuery(){
 });
   alert(locationArray[2]);
   clearMarkers();
-  setAllMap(map);
+   var marker = new google.maps.Marker({
+      position: locationArray[2],
+      map: map,
+      title: locationNameArray[2]
+    });
 };
 
 
