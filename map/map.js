@@ -25,114 +25,14 @@ query.find({
 
 //      alert(locationArray[2]);
     }
-  var locationNameArray = ['Tech109', 'Tech209', 'Tech409'];
-var markers = [];
 
-var tom = new google.maps.LatLng(42, -87.8);
-var jim = new google.maps.LatLng(41.9, -87.85);
-var peter = new google.maps.LatLng(42.1, -87.9);
-var image = 'friendFlag.png';
-
-var friendArray = [tom, jim, peter];
-var friendNameArray = ['Tom', 'Jim', 'Peter'];
-var friendMarkers = [];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function initialize() {
-  var mapOptions = {
-    zoom: 20
-  };
-  map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
-
-  // Try HTML5 geolocation
-  if(navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var pos = new google.maps.LatLng(position.coords.latitude,
-                                       position.coords.longitude);
-
-      var infowindow = new google.maps.InfoWindow({
-        map: map,
-        position: pos,
-        content: 'Here is your current location.'
-      });
-
-      map.setCenter(pos);
-    }, function() {
-      handleNoGeolocation(true);
-    });
-  } else {
-    // Browser doesn't support Geolocation
-    handleNoGeolocation(false);
-  }
-
-  var coord;
-  var i=0;
-  for (coord in locationArray) {
-    var marker = new google.maps.Marker({
-      position: locationArray[coord],
-      map: map,
-      title: locationNameArray[coord]
-    });
-    markers.push(marker);
-
-    marker.setTitle(marker.title);
-    attachActivityMessage(marker, i);
-    i++;
-  }
-  clearMarkers();
-
-  var person;
-  var i=0;
-  for (person in friendArray) {
-    var marker = new google.maps.Marker({
-      position: friendArray[person],
-      map: map,
-      title: friendNameArray[person],
-      icon: image
-    });
-    friendMarkers.push(marker);
-
-    marker.setTitle(marker.title);
-    attachFriendMessage(marker, i);
-    i++;
-  }
-  clearFriends();
-  
-  if (Show_1_floor)
-  {
-  show1floor();  
-  }
-  else (Show_2_floor)
-  {
-  show2floor();
-  }
-}  
 },
   error: function(error) {
     alert("Error: " + error.code + " " + error.message);
 }
 });
 for(var j=0; j<10000000;j++){}; 
-//alert("final"+locationArray[2]);
+alert("final"+locationArray[2]);
 var locationNameArray = ['Tech109', 'Tech209', 'Tech409'];
 var markers = [];
 
