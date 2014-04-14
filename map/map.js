@@ -30,7 +30,7 @@ query.find({
     alert("Error: " + error.code + " " + error.message);
 }
 });
-//for(var j=0; j<1000000;j++){}; 
+for(var j=0; j<10000000;j++){}; 
 //alert("final"+locationArray[2]);
 var locationNameArray = ['Tech109', 'Tech209', 'Tech409'];
 var markers = [];
