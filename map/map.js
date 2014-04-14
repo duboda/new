@@ -192,6 +192,7 @@ function myFunctionQuery(){
       alert("Error: " + error.code + " " + error.message);
   }
 });
+  alert("final"+locationArray[2]);
   function initialize() {
   var mapOptions = {
     zoom: 20
