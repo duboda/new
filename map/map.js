@@ -6,7 +6,7 @@ var map;
 var Tech409 = new google.maps.LatLng(42.058150, -87.575780);
 
 
-var locationArray = [Tech409];
+var locationArray = [];
 
 alert("final"+locationArray[2]);
 var locationNameArray = ['Tech109', 'Tech209', 'Tech409'];
