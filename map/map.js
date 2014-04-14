@@ -9,7 +9,7 @@ var Tech309 = new google.maps.LatLng(42.058150, -87.675780);
 var Tech409 = new google.maps.LatLng(42.058150, -87.575780);
 
 
-var locationArray = [1];
+var locationArray = [Tech409];
 Parse.initialize("om9ynedsIy67rU9vfQh8IVR2vv0A6WnFz0jgWUrP", "mzPU7M8YQwD83alRhWwGtM9niEiDcSKs4mOKSNbp");
 var GameScore = Parse.Object.extend("TechBathroom");
 var query = new Parse.Query(GameScore);
