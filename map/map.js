@@ -38,9 +38,8 @@ function initialize() {
         map: map,
         position: pos,
         content: 'Here is your current location.'
-        locationArray = pos;
       });
-
+      locationArray = pos;
       map.setCenter(pos);
     }, function() {
       handleNoGeolocation(true);
@@ -195,9 +194,8 @@ function myFunctionQuery(){
             map: map,
             position: pos,
             content: 'Here is your current location.'
-            locationArray = pos;
           });
-
+          locationArray = pos;
           map.setCenter(pos);
         }, function() {
           handleNoGeolocation(true);
