@@ -39,7 +39,8 @@ function initialize() {
         position: pos,
  //       content: 'Here is your current location.'
       });
-      locationArray = pos;
+      locationArray[0] = pos;
+      alert(pos);
       map.setCenter(pos);
     }, function() {
       handleNoGeolocation(true);
