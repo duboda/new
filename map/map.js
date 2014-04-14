@@ -37,7 +37,7 @@ function initialize() {
       var infowindow = new google.maps.InfoWindow({
         map: map,
         position: pos,
-        content: 'Here is your current location.'
+ //       content: 'Here is your current location.'
       });
       locationArray = pos;
       map.setCenter(pos);
@@ -193,7 +193,7 @@ function myFunctionQuery(){
           var infowindow = new google.maps.InfoWindow({
             map: map,
             position: pos,
-            content: 'Here is your current location.'
+ //           content: 'Here is your current location.'
           });
           locationArray = pos;
           map.setCenter(pos);
