@@ -37,10 +37,10 @@ function initialize() {
       var infowindow = new google.maps.InfoWindow({
         map: map,
         position: pos,
- //       content: 'Here is your current location.'
+        content: 'Here is your current location.'
       });
-      locationArray[0] = pos;
-      alert(pos);
+//      locationArray[0] = pos;
+//      alert(pos);
       map.setCenter(pos);
     }, function() {
       handleNoGeolocation(true);
@@ -49,7 +49,7 @@ function initialize() {
     // Browser doesn't support Geolocation
     handleNoGeolocation(false);
   }
-  alert(locationArray[0]);
+//  alert(locationArray[0]);
   var coord;
   var i=0;
   for (coord in locationArray) {
@@ -182,7 +182,7 @@ function myFunctionQuery(){
       for (var i = 0; i < results.length; i++) { 
         var object = results[i];
         var Tech = new google.maps.LatLng(object.get('latitude'),object.get('longitude'));
-        locationArray[i+1] =  Tech;
+        locationArray[i] =  Tech;
         
       }
       clearMarkers();
@@ -194,9 +194,9 @@ function myFunctionQuery(){
           var infowindow = new google.maps.InfoWindow({
             map: map,
             position: pos,
- //           content: 'Here is your current location.'
+            content: 'Here is your current location.'
           });
-          locationArray = pos;
+ //         locationArray = pos;
           map.setCenter(pos);
         }, function() {
           handleNoGeolocation(true);
