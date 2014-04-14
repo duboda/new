@@ -49,7 +49,7 @@ function initialize() {
     // Browser doesn't support Geolocation
     handleNoGeolocation(false);
   }
-
+  alert(locationArray[0]);
   var coord;
   var i=0;
   for (coord in locationArray) {
