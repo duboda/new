@@ -195,11 +195,19 @@ function myFunctionQuery(){
 });
   alert(locationArray[2]);
   clearMarkers();
-   var marker = new google.maps.Marker({
-      position: locationArray[2],
+  var i=0;
+  for (coord in locationArray) {
+    var marker = new google.maps.Marker({
+      position: locationArray[coord],
       map: map,
-      title: locationNameArray[2]
+      title: locationNameArray[coord]
     });
+    markers.push(marker);
+
+    marker.setTitle(marker.title);
+    attachActivityMessage(marker, i);
+    i++;
+  }
 };
 
 
