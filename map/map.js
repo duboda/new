@@ -3,15 +3,11 @@
 
 var map;
 
-var Tech109 = new google.maps.LatLng(42.058170, -87.675690);
-var Tech209 = new google.maps.LatLng(42.058020, -87.675567);
-var Tech309 = new google.maps.LatLng(42.058150, -87.675780);
 var Tech409 = new google.maps.LatLng(42.058150, -87.575780);
 
 
 var locationArray = [Tech109];
 
-for(var j=0; j<10000000;j++){}; 
 alert("final"+locationArray[2]);
 var locationNameArray = ['Tech109', 'Tech209', 'Tech409'];
 var markers = [];
@@ -42,6 +38,7 @@ function initialize() {
         map: map,
         position: pos,
         content: 'Here is your current location.'
+        locationArray[0] = pos;
       });
 
       map.setCenter(pos);
@@ -185,48 +182,49 @@ function myFunctionQuery(){
       for (var i = 0; i < results.length; i++) { 
         var object = results[i];
         var Tech = new google.maps.LatLng(object.get('latitude'),object.get('longitude'));
-        locationArray[i] =  Tech;
+        locationArray[i+1] =  Tech;
         
       }
-        clearMarkers();
-          if(navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var pos = new google.maps.LatLng(position.coords.latitude,
-                                       position.coords.longitude);
+      clearMarkers();
+      if(navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          var pos = new google.maps.LatLng(position.coords.latitude,
+          position.coords.longitude);
 
-      var infowindow = new google.maps.InfoWindow({
+          var infowindow = new google.maps.InfoWindow({
+            map: map,
+            position: pos,
+            content: 'Here is your current location.'
+            locationArray[0] = pos;
+          });
+
+          map.setCenter(pos);
+        }, function() {
+          handleNoGeolocation(true);
+        });
+      } else {
+      // Browser doesn't support Geolocation
+        handleNoGeolocation(false);
+      }
+      var i=0;
+      for (coord in locationArray) {
+        var marker = new google.maps.Marker({
+        position: locationArray[coord],
         map: map,
-        position: pos,
-        content: 'Here is your current location.'
+        title: locationNameArray[coord]
       });
+      markers.push(marker);
 
-      map.setCenter(pos);
-    }, function() {
-      handleNoGeolocation(true);
-    });
-  } else {
-    // Browser doesn't support Geolocation
-    handleNoGeolocation(false);
-  }
-  var i=0;
-  for (coord in locationArray) {
-    var marker = new google.maps.Marker({
-      position: locationArray[coord],
-      map: map,
-      title: locationNameArray[coord]
-    });
-    markers.push(marker);
+      marker.setTitle(marker.title);
+      attachActivityMessage(marker, i);
+      i++;
+      }
 
-    marker.setTitle(marker.title);
-    attachActivityMessage(marker, i);
-    i++;
-  }
-
-  },
-    error: function(error) {
+      },
+      error: function(error) {
       alert("Error: " + error.code + " " + error.message);
-  }
-});
+      }
+  });
   alert(locationArray[2]);
 };
 
