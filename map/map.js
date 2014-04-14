@@ -195,6 +195,7 @@ function myFunctionQuery(){
 });
   alert(locationArray[2]);
   clearMarkers();
+  setAllMap(map);
 };
 
 
