@@ -125,6 +125,7 @@ function myFunctionChange(){
   Parse.initialize("om9ynedsIy67rU9vfQh8IVR2vv0A6WnFz0jgWUrP", "mzPU7M8YQwD83alRhWwGtM9niEiDcSKs4mOKSNbp");
   var GameScore = Parse.Object.extend("TechBathroom");
   var query = new Parse.Query(GameScore);
+  alert("11");
   query.equalTo("gender", "M")&&query.equalTo("name","102");
   query.find({
     success: function(results) {
