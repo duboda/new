@@ -15,11 +15,11 @@ Parse.initialize("om9ynedsIy67rU9vfQh8IVR2vv0A6WnFz0jgWUrP", "mzPU7M8YQwD83alRhW
       var techbathroom6 = new TechBathroom();
       techbathroom6.save({gender: "F", floor: 0, latitude: 42.05806, longitude: -87.6758333, stallnumber: 4, name: "G06" });
       var techbathroom7 = new TechBathroom();
-      techbathroom7.save({gender: "F", floor: 1, latitude: 42.05694, longitude: -87.6758333, stallnumber: 4, name: "101" });
+      techbathroom7.save({gender: "F", floor: 1, latitude: 42.05778, longitude: -87.6761111, stallnumber: 4, name: "101" });
       var techbathroom8 = new TechBathroom();
       techbathroom8.save({gender: "F", floor: 1, latitude: 42.05750, longitude: -87.6752778, stallnumber: 3, name: "102"  });
       var techbathroom9 = new TechBathroom();
-      techbathroom9.save({gender: "F", floor: 1, latitude: 42.05778, longitude: -87.6755556, stallnumber: 10, name: "103"  });
+      techbathroom9.save({gender: "F", floor: 1, latitude: 42.05778, longitude: -87.6758333, stallnumber: 10, name: "103"  });
       var techbathroom10 = new TechBathroom();
       techbathroom10.save({gender: "F", floor: 1, latitude: 42.05778, longitude: -87.6758333, stallnumber: 3, name: "104"  });
       var techbathroom11 = new TechBathroom();
@@ -37,7 +37,7 @@ Parse.initialize("om9ynedsIy67rU9vfQh8IVR2vv0A6WnFz0jgWUrP", "mzPU7M8YQwD83alRhW
       var techbathroom17 = new TechBathroom();
       techbathroom17.save({gender: "F", floor: 2, latitude: 42.05778, longitude: -87.6761111, stallnumber: 3, name: "205"  });
       var techbathroom18 = new TechBathroom();
-      techbathroom18.save({gender: "F", floor: 2, latitude: 42.05806, longitude: -87.6758333, stallnumber: 3, name: "206"  });
+      techbathroom18.save({gender: "F", floor: 2, latitude: 42.05806, longitude: -87.6761111, stallnumber: 3, name: "206"  });
       var techbathroom19 = new TechBathroom();
       techbathroom19.save({gender: "F", floor: 2, latitude: 42.05806, longitude: -87.6763889, stallnumber: 4, name: "207"  });
       var techbathroom20 = new TechBathroom();
@@ -47,7 +47,7 @@ Parse.initialize("om9ynedsIy67rU9vfQh8IVR2vv0A6WnFz0jgWUrP", "mzPU7M8YQwD83alRhW
       var techbathroom22 = new TechBathroom();
       techbathroom22.save({gender: "F", floor: 3, latitude: 42.05778, longitude: -87.6761111, stallnumber: 3, name: "303" });
       var techbathroom23 = new TechBathroom();
-      techbathroom23.save({gender: "F", floor: 3, latitude: 42.05778, longitude: -87.6761111, stallnumber: 2, name: "304" });
+      techbathroom23.save({gender: "F", floor: 3, latitude: 42.05778, longitude: -87.6758333, stallnumber: 2, name: "304" });
       var techbathroom24 = new TechBathroom();
       techbathroom24.save({gender: "F", floor: 3, latitude: 42.05806, longitude: -87.6761111, stallnumber: 2, name: "305" });
       var techbathroom25 = new TechBathroom();
