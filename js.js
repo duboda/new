@@ -134,7 +134,7 @@ function myFunctionChange(){
       for (var i = 0; i < results.length; i++) { 
         var object = results[i];
         alert(object.id + ' - ' + object.get('number'));
-        object.change("number": 4);
+        object.set("number", 4);
         alert(object.get('number'));
       }
   },
