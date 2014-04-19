@@ -135,6 +135,7 @@ function myFunctionChange(){
         var object = results[i];
         alert(object.id + ' - ' + object.get('number'));
         object.set("number", 4);
+        object.save();
         alert(object.get('number'));
       }
   },
