@@ -126,7 +126,7 @@ function myFunctionChange(){
   var GameScore = Parse.Object.extend("TechBathroom");
   var query = new Parse.Query(GameScore);
   alert("11");
-  query.equalTo("gender", "M")&&query.equalTo("name","102");
+  query.equalTo("gender", "F")&&query.equalTo("name","102");
   query.find({
     success: function(results) {
       alert("Successfully retrieved " + results.length + " scores.");
