@@ -146,9 +146,8 @@ function myFunctionChange(){
 
 };
 
-$("#fixed").raty({
-  readOnly: true,
-  score: 2
-
-});
+     $("#fixed").raty({
+         readOnly: true,
+         score: 3
+     });
 
