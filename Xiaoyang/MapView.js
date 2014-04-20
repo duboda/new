@@ -96,7 +96,7 @@
 
 
  }
-      $('.raty').raty({
+      $('div').raty({
         readOnly: true,
         score: 5
      });
