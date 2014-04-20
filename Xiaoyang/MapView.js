@@ -96,3 +96,7 @@
 
 
  }
+      $('.raty').raty({
+        readOnly: true,
+        score: 5
+     });
