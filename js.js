@@ -145,3 +145,10 @@ function myFunctionChange(){
   });
 
 };
+
+$('#fixed').raty({
+  readOnly: ture,
+  start: 2
+
+});
+
