@@ -147,7 +147,7 @@ function myFunctionChange(){
 };
 
 $('#fixed').raty({
-  readOnly: ture,
+  readOnly: true,
   start: 2
 
 });
