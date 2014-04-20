@@ -63,6 +63,10 @@
          readOnly: true,
          score: 3
      });
+     $("#fixed").raty({
+         readOnly: true,
+         score: 3
+     });     
      // console.log($('tbody').children().length);
 
      // $('tbody').children().each(function(){
