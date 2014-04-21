@@ -29,7 +29,7 @@
 
          var shows = rows.filter(checkselect);
          console.log(shows);
-         shows.show();
+         shows.show('slow');
          rows.not(shows).hide();
 
          if(checkselect.indexOf("tech-g")>=0)
@@ -63,10 +63,6 @@
          readOnly: true,
          score: 3
      });
-     $("#fixed").raty({
-         readOnly: true,
-         score: 3
-     });     
      // console.log($('tbody').children().length);
 
      // $('tbody').children().each(function(){
@@ -89,14 +85,7 @@
          });
 
      })
-     $('.raty').raty({
-        readOnly: true,
-        score: 5
-     });
+     $('.raty').raty();
 
 
  }
-      $('div').raty({
-        readOnly: true,
-        score: 5
-     });
