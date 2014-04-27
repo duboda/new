@@ -121,30 +121,49 @@ function myFunctionQuery(){
   }
   });
 };
-function myFunctionChange(){
-  Parse.initialize("om9ynedsIy67rU9vfQh8IVR2vv0A6WnFz0jgWUrP", "mzPU7M8YQwD83alRhWwGtM9niEiDcSKs4mOKSNbp");
-  var GameScore = Parse.Object.extend("TechBathroom");
-  var query = new Parse.Query(GameScore);
-  alert("11");
-  query.equalTo("gender", "F")&&query.equalTo("name","102");
-  query.find({
-    success: function(results) {
-      alert("Successfully retrieved " + results.length + " scores.");
-      // Do something with the returned Parse.Object values
-      for (var i = 0; i < results.length; i++) { 
-        var object = results[i];
-        alert(object.id + ' - ' + object.get('number'));
-        object.set("number", 4);
-        object.save();
-        alert(object.get('number'));
-      }
-  },
-  error: function(error) {
-    alert("Error: " + error.code + " " + error.message);
-  }
-  });
+function myFunctionFran()
+{
+Parse.initialize("om9ynedsIy67rU9vfQh8IVR2vv0A6WnFz0jgWUrP", "mzPU7M8YQwD83alRhWwGtM9niEiDcSKs4mOKSNbp");
+      var TechBathroom = Parse.Object.extend("FranBathroom");
+      var techbathroom5 = new TechBathroom();
+      techbathroom5.save({gender: "F", floor: 1, latitude: 42.0588889, longitude: -87.673888889, stallnumber: 1, name: "107", cleanliness: 0, spaciousness: 0, odor: 0, waittime: 0, overall: 0, number: 0  });
+      var techbathroom6 = new TechBathroom();
+      techbathroom6.save({gender: "M", floor: 1, latitude: 42.0588889, longitude: -87.673888889, stallnumber: 2, name: "108", cleanliness: 0, spaciousness: 0, odor: 0, waittime: 0, overall: 0, number: 0   });     
+      var techbathroom7 = new TechBathroom();
+      techbathroom7.save({gender: "U", floor: 1, latitude: 42.0588889, longitude: -87.67333333, stallnumber: 1, name: "101", cleanliness: 0, spaciousness: 0, odor: 0, waittime: 0, overall: 0, number: 0  });
+      var techbathroom8 = new TechBathroom();
+      techbathroom8.save({gender: "F", floor: 1, latitude: 42.0588889, longitude: -87.67333333, stallnumber: 2, name: "102", cleanliness: 0, spaciousness: 0, odor: 0, waittime: 0, overall: 0, number: 0   });
+      var techbathroom9 = new TechBathroom();
+      techbathroom9.save({gender: "F", floor: 1, latitude: 42.0586111, longitude: -87.673055556, stallnumber: 2, name: "103", cleanliness: 0, spaciousness: 0, odor: 0, waittime: 0, overall: 0, number: 0   });
+      var techbathroom10 = new TechBathroom();
+      techbathroom10.save({gender: "M", floor: 1, latitude: 42.0586111, longitude: -87.673055556, stallnumber: 3, name: "104", cleanliness: 0, spaciousness: 0, odor: 0, waittime: 0, overall: 0, number: 0   });
+      var techbathroom11 = new TechBathroom();
+      techbathroom11.save({gender: "F", floor: 1, latitude: 42.0583333, longitude: -87.673888889, stallnumber: 3, name: "105", cleanliness: 0, spaciousness: 0, odor: 0, waittime: 0, overall: 0, number: 0   });
+      var techbathroom12 = new TechBathroom();
+      techbathroom12.save({gender: "M", floor: 1, latitude: 42.0583333, longitude: -87.673888889, stallnumber: 9, name: "106", cleanliness: 0, spaciousness: 0, odor: 0, waittime: 0, overall: 0, number: 0   });
+      var techbathroom13 = new TechBathroom();
+      techbathroom13.save({gender: "F", floor: 2, latitude: 42.058889, longitude: -87.673888889, stallnumber: 1, name: "201", cleanliness: 0, spaciousness: 0, odor: 0, waittime: 0, overall: 0, number: 0   });
+      var techbathroom14 = new TechBathroom();
+      techbathroom14.save({gender: "M", floor: 2, latitude: 42.058889, longitude: -87.673888889, stallnumber: 3, name: "202", cleanliness: 0, spaciousness: 0, odor: 0, waittime: 0, overall: 0, number: 0   });
+      var techbathroom15 = new TechBathroom();
+      techbathroom15.save({gender: "F", floor: 2, latitude: 42.058889, longitude: -87.673333333, stallnumber: 3, name: "203", cleanliness: 0, spaciousness: 0, odor: 0, waittime: 0, overall: 0, number: 0   });
+      var techbathroom16 = new TechBathroom();
+      techbathroom16.save({gender: "M", floor: 2, latitude: 42.058889, longitude: -87.673333333, stallnumber: 3, name: "204", cleanliness: 0, spaciousness: 0, odor: 0, waittime: 0, overall: 0, number: 0   });
+      var techbathroom17 = new TechBathroom();
+      techbathroom17.save({gender: "F", floor: 2, latitude: 42.0586111, longitude: -87.673055556, stallnumber: 3, name: "205", cleanliness: 0, spaciousness: 0, odor: 0, waittime: 0, overall: 0, number: 0   });
+      var techbathroom18 = new TechBathroom();
+      techbathroom18.save({gender: "M", floor: 2, latitude: 42.0586111, longitude: -87.673055556, stallnumber: 3, name: "206", cleanliness: 0, spaciousness: 0, odor: 0, waittime: 0, overall: 0, number: 0   });
+      var techbathroom20 = new TechBathroom();
+      techbathroom20.save({gender: "U", floor: 3, latitude: 42.0588889, longitude: -87.673333333, stallnumber: 1, name: "301", cleanliness: 0, spaciousness: 0, odor: 0, waittime: 0, overall: 0, number: 0   });
+      var techbathroom21 = new TechBathroom();
+      techbathroom21.save({gender: "F", floor: 3, latitude: 42.0588889, longitude: -87.673333333, stallnumber: 2, name: "302", cleanliness: 0, spaciousness: 0, odor: 0, waittime: 0, overall: 0, number: 0  });
+      var techbathroom22 = new TechBathroom();
+      techbathroom22.save({gender: "F", floor: 3, latitude: 42.0586111, longitude: -87.673055556, stallnumber: 3, name: "303", cleanliness: 0, spaciousness: 0, odor: 0, waittime: 0, overall: 0, number: 0  });
+      var techbathroom23 = new TechBathroom();
+      techbathroom23.save({gender: "M", floor: 3, latitude: 42.0586111, longitude: -87.673055556, stallnumber: 2, name: "304", cleanliness: 0, spaciousness: 0, odor: 0, waittime: 0, overall: 0, number: 0  });
 
 };
+
 
 
 
