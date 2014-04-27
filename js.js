@@ -124,7 +124,7 @@ function myFunctionQuery(){
 function myFunctionFran()
 {
 Parse.initialize("om9ynedsIy67rU9vfQh8IVR2vv0A6WnFz0jgWUrP", "mzPU7M8YQwD83alRhWwGtM9niEiDcSKs4mOKSNbp");
-      var TechBathroom = Parse.Object.extend("franBathroom");
+      var TechBathroom = Parse.Object.extend("FranBathroom");
       var techbathroom5 = new TechBathroom();
       techbathroom5.save({gender: "F", floor: 1, latitude: 42.0588889, longitude: -87.673888889, stallnumber: 1, name: "107", cleanliness: 0, spaciousness: 0, odor: 0, waittime: 0, overall: 0, number: 0  });
       var techbathroom6 = new TechBathroom();
