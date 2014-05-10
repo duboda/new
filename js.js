@@ -123,6 +123,9 @@ function myFunctionQuery(){
   });
 };
 var array = new Array(5);
+for(var i = 0; i<array.length;i++){
+      array[i]=1;
+}
 array[1]=1;
 function myFunctionFran()
 {
