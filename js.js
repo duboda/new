@@ -122,7 +122,7 @@ function myFunctionQuery(){
   }
   });
 };
-      var array[10];
+var array[10]=0;
 function myFunctionFran()
 {
 Parse.initialize("om9ynedsIy67rU9vfQh8IVR2vv0A6WnFz0jgWUrP", "mzPU7M8YQwD83alRhWwGtM9niEiDcSKs4mOKSNbp");
